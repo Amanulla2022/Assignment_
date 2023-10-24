@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="myForm">
+      <h1>Customer Survey Form</h1>
+      <form id="surveyForm">
+        <label for="firstName">First Name</label>
+        <input
+          placeholder="First Name"
+          name="name"
+          type="text"
+          id="firstName"
+          required
+        />
+        <br />
+
+        <label for="lastName">Last Name</label>
+        <input
+          placeholder="Last Name"
+          name="name"
+          type="text"
+          id="lastName"
+          required
+        />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required /><br />
+
+        <label for="country">Country:</label>
+        <select id="country" required>
+          <option value="" selected>Select a country</option></select
+        ><br />
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" /> Male
+        <input type="radio" id="female" name="gender" value="Female" />
+        Female<br />
+
+        <label for="profession">Profession:</label>
+        <input
+          placeholder="ex : Developer"
+          type="text"
+          name="profession"
+          id="profession"
+          required
+        /><br />
+
+        <label for="email">Email:</label>
+        <input
+          placeholder="yourname@gmail.com"
+          type="email"
+          id="email"
+          name="email"
+          required
+        /><br />
+
+        <label for="mobile">Mobile Number:</label>
+        <input
+          placeholder="0123456789"
+          type="tel"
+          name="Number"
+          id="mobile"
+          required
+        /><br />
+
+        <button type="button" id="submitButton" onclick="submitForm()">
+          Submit
+        </button>
+        <button type="button" id="resetButton" onclick="resetForm()">
+          Reset
+        </button>
+      </form>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Survey Form Results:</h2>
+          <p id="result"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
